@@ -37,13 +37,12 @@ public class CoursesController {
 	public String add() {
 		return "index";
 	}
-	
-	@GetMapping(value="/get/{course_id}")
-	public String getcourse(@PathVariable int course_id,Model m)
-	{
-		Courses c =cdao.getById(course_id);
-		m.addAttribute("course",c);
+
+	@GetMapping(value = "/get/{course_id}")
+	public String getcourse(@PathVariable int course_id, Model m) {
+		Courses c = cdao.getById(course_id);
+		m.addAttribute("course", c);
 		return "index";
 	}
-	
+
 }
